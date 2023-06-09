@@ -25,12 +25,6 @@ class MyApp extends StatelessWidget {
         duration: 2000,
         nextScreen: MyHomePage(),
       ),
-      // routes: {
-      //   'home': (context)=> MyHomePage(),
-      //   'wishlist': (context)=> WishList(),
-      //   'bookings': (context)=> BookingPage(),
-      //   'settings': (context)=> SettingsPage(),
-      // },
     );
   }
 }
