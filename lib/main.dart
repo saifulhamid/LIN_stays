@@ -1,8 +1,19 @@
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:lin_stays/database/functions/dbfunction.dart';
+import 'package:lin_stays/database/model/model.dart';
 import 'package:lin_stays/homepage.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 
-void main() {
+Future<void> main() async {
+  await Hive.initFlutter();
+  if (!Hive.isAdapterRegistered(LINModelAdapter().typeId)) {
+    Hive.registerAdapter(LINModelAdapter());
+  }
+  if (!Hive.isAdapterRegistered(BookAndCancelAdapter().typeId)) {
+    Hive.registerAdapter(BookAndCancelAdapter());
+  }
+  getAllDetails();
   runApp(const MyApp());
 }
 
@@ -13,8 +24,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        primaryColor: Colors.green.shade700,
         useMaterial3: true,
+        appBarTheme: const AppBarTheme(backgroundColor: Colors.white),
       ),
       home: AnimatedSplashScreen(
         splash: Image.asset(
