@@ -141,7 +141,7 @@ class SettingsPage extends StatelessWidget {
                         Navigator.pushReplacement(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => adminEdit()));
+                                builder: (context) => AdminEdit()));
                       } else {
                         Navigator.pop(context);
                       }

@@ -76,9 +76,6 @@ class _InDetailState extends State<InDetailAdminView> {
                                   fontWeight: FontWeight.w500,
                                   letterSpacing: 3),
                             ),
-                            // Text(address,
-                            //     style: const TextStyle(
-                            //         fontSize: 17, letterSpacing: 1)),
                             Text('${data.maximumGuest.toString()} guests'),
                             Text('${data.noOfRooms.toString()} rooms'),
                           ],

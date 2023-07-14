@@ -5,7 +5,6 @@ import 'package:full_screen_image/full_screen_image.dart';
 import 'package:lin_stays/database/functions/bookingdb.dart';
 import 'package:lin_stays/database/functions/dbfunction.dart';
 import 'package:lin_stays/database/model/model.dart';
-
 import '../../homepage.dart';
 
 class ConfirmationPage extends StatefulWidget {
@@ -336,16 +335,16 @@ class _ConfirmationPageState extends State<ConfirmationPage> {
                         MaterialPageRoute(builder: (context) => MyHomePage()),
                         (route) => false);
                   },
-                  child: const Text(
-                    'Cancel Booking',
-                    style: TextStyle(color: Colors.white),
-                  ),
                   style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all(
                           const Color.fromARGB(255, 183, 12, 0)),
                       shape: MaterialStateProperty.all(RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(8))),
                       overlayColor: MaterialStateProperty.all(Colors.red)),
+                  child: const Text(
+                    'Cancel Booking',
+                    style: TextStyle(color: Colors.white),
+                  ),
                 ),
                 ElevatedButton(
                   onPressed: () {

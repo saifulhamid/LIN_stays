@@ -58,11 +58,11 @@ class _ClassesState extends State<Classes> {
                           });
                         },
                         icon: _linModel.isFavorite!
-                            ? Icon(
+                            ? const Icon(
                                 Icons.favorite,
                                 color: Colors.red,
                               )
-                            : Icon(
+                            : const Icon(
                                 Icons.favorite,
                                 color: Colors.white,
                               ))),
@@ -123,14 +123,9 @@ class _ClassesState extends State<Classes> {
         place: _linModel.place,
         isFavorite: _linModel.isFavorite);
 
-    print(data.isFavorite);
-    print(data.id);
-
     if (data.isFavorite!) {
       setFavoriteStatus(data.id!, true);
     } else {
-      print(data.id);
-      // final wishlistData = Hive.openBox<LINModel>(dbWishlist);
       setFavoriteStatus(data.id!, false);
     }
   }

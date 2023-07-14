@@ -48,7 +48,7 @@ class _AdminPageState extends State<AdminPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: Icon(Icons.arrow_back_sharp),
+        leading: const Icon(Icons.arrow_back_sharp),
         backgroundColor: Colors.white,
         title: const Text('Admin Page'),
         centerTitle: true,
@@ -368,7 +368,7 @@ class _AdminPageState extends State<AdminPage> {
     addDetails(details);
     Navigator.of(context).pushReplacement(
       MaterialPageRoute(
-        builder: (context) => adminEdit(),
+        builder: (context) => const AdminEdit(),
       ),
     );
   }

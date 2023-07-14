@@ -275,7 +275,7 @@ class _EditResortState extends State<EditResort> {
                       updateDetails();
                       snackBar();
                       Navigator.of(context).pushReplacement(MaterialPageRoute(
-                        builder: (context) => adminEdit(),
+                        builder: (context) => AdminEdit(),
                       ));
                       // dispose();
                     },

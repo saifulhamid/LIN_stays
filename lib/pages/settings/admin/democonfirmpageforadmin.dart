@@ -350,7 +350,7 @@ class _ConfirmationPageState extends State<ConfirmationPageAdminView> {
                 ElevatedButton(
                   onPressed: () {
                     Navigator.pushReplacement(context,
-                        MaterialPageRoute(builder: (context) => adminEdit()));
+                        MaterialPageRoute(builder: (context) => AdminEdit()));
                   },
                   child: const Text(
                     'Confirm Booking',

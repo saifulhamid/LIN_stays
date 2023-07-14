@@ -41,7 +41,6 @@ class _WishListState extends State<WishList> {
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Container(
-          // color: Colors.amber,
           height: double.infinity,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,

@@ -1,15 +1,9 @@
 import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:full_screen_image/full_screen_image.dart';
 import 'package:lin_stays/database/functions/bookingdb.dart';
 import 'package:lin_stays/database/model/model.dart';
-// import 'package:intl/intl.dart';
-// import 'package:lin_stays/explore_classes.dart';
 import 'package:lin_stays/homepage.dart';
-// import 'package:lin_stays/pages/explorePage/explore.dart';
-
-// import '../../homepage.dart';
 
 class DetailsOfBooked extends StatefulWidget {
   final index;
@@ -49,10 +43,6 @@ class _DetailsOfBookedState extends State<DetailsOfBooked> {
             preferredSize: Size.fromHeight(1),
             child: Padding(
               padding: EdgeInsets.symmetric(horizontal: 25),
-              // child: Container(
-              //   decoration: const BoxDecoration(
-              //       border: Border(bottom: BorderSide(width: 1))),
-              // ),
             )),
       ),
       body: SafeArea(
@@ -334,16 +324,16 @@ class _DetailsOfBookedState extends State<DetailsOfBooked> {
                             );
                           });
                     },
-                    child: const Text(
-                      'Cancel Booking',
-                      style: TextStyle(color: Colors.white),
-                    ),
                     style: ButtonStyle(
                         backgroundColor: MaterialStateProperty.all(
                             const Color.fromARGB(255, 183, 12, 0)),
                         shape: MaterialStateProperty.all(RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(8))),
                         overlayColor: MaterialStateProperty.all(Colors.red)),
+                    child: const Text(
+                      'Cancel Booking',
+                      style: TextStyle(color: Colors.white),
+                    ),
                   ),
                 ),
               ],

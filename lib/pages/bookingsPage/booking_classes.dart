@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:full_screen_image/full_screen_image.dart';
-import 'package:lin_stays/database/functions/bookingdb.dart';
 
-// ===================================== Booking page
 class Booked extends StatelessWidget {
   final image;
   final resortName;

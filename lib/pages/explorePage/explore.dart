@@ -92,18 +92,18 @@ class _ExplorePageState extends State<ExplorePage> {
                                 borderRadius: const BorderRadius.all(
                                     Radius.circular(20))),
                             child: Padding(
-                              padding: EdgeInsets.symmetric(horizontal: 15),
+                              padding: const EdgeInsets.symmetric(horizontal: 15),
                               child: Row(
                                 children: [
-                                  Icon(Icons.search),
-                                  SizedBox(
+                                  const Icon(Icons.search),
+                                  const SizedBox(
                                     width: 10,
                                   ),
                                   Expanded(
                                     child: TextField(
                                       controller: searchController,
                                       onChanged: (_) => searchResort(),
-                                      decoration: InputDecoration(
+                                      decoration: const InputDecoration(
                                           border: InputBorder.none,
                                           hintText: 'Where to?'),
                                     ),
@@ -178,7 +178,7 @@ class _ExplorePageState extends State<ExplorePage> {
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
                 const Text(
@@ -222,7 +222,7 @@ class _ExplorePageState extends State<ExplorePage> {
                   height: 40,
                   child: TextFormField(
                     controller: placeController,
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                         border: OutlineInputBorder(), labelText: 'Place'),
                   ),
                 ),
@@ -247,7 +247,7 @@ class _ExplorePageState extends State<ExplorePage> {
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
               ],

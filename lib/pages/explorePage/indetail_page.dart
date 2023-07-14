@@ -17,10 +17,6 @@ class InDetail extends StatefulWidget {
 }
 
 class _InDetailState extends State<InDetail> {
-  // DateTime currentDate = DateTime.now();
-  // String? selectedDate;
-  // DateTimeRange dateRange =
-  //     DateTimeRange(start: DateTime.now(), end: DateTime.now());
 
   String? resortPrice;
 
@@ -78,9 +74,6 @@ class _InDetailState extends State<InDetail> {
                                   fontWeight: FontWeight.w500,
                                   letterSpacing: 3),
                             ),
-                            // Text(address,
-                            //     style: const TextStyle(
-                            //         fontSize: 17, letterSpacing: 1)),
                             Text('${data.maximumGuest.toString()} guests'),
                             Text('${data.noOfRooms.toString()} rooms'),
                           ],

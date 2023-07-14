@@ -7,8 +7,8 @@ import 'package:lin_stays/pages/settings/admin/admin_page.dart';
 import 'package:lin_stays/pages/settings/admin/edit_resort.dart';
 import 'package:lin_stays/pages/settings/admin/indetailsadminview.dart';
 
-class adminEdit extends StatelessWidget {
-  const adminEdit({super.key});
+class AdminEdit extends StatelessWidget {
+  const AdminEdit({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -53,7 +53,6 @@ class adminEdit extends StatelessWidget {
                                         MaterialPageRoute(
                                             builder: (context) =>
                                                 EditResort(index)));
-                                    // Navigator.of(context).pop();
                                   },
                                   icon: const Icon(
                                     Icons.edit,
