@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:full_screen_image/full_screen_image.dart';
 import 'package:lin_stays/database/functions/dbfunction.dart';
 import 'package:lin_stays/database/model/model.dart';
-import 'package:lin_stays/pages/settings/admin/democonfirmpageforadmin.dart';
+import 'package:lin_stays/pages/settings/admin/adminConfirmpage.dart';
 
 class InDetailAdminView extends StatefulWidget {
   int index;

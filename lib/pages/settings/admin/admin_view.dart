@@ -5,7 +5,7 @@ import 'package:lin_stays/database/functions/dbfunction.dart';
 import 'package:lin_stays/database/model/model.dart';
 import 'package:lin_stays/pages/settings/admin/admin_page.dart';
 import 'package:lin_stays/pages/settings/admin/edit_resort.dart';
-import 'package:lin_stays/pages/settings/admin/indetailsadminview.dart';
+import 'package:lin_stays/pages/settings/admin/adminIndetailsView.dart';
 
 class AdminEdit extends StatelessWidget {
   const AdminEdit({super.key});
