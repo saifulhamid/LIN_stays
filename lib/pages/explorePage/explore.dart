@@ -92,7 +92,8 @@ class _ExplorePageState extends State<ExplorePage> {
                                 borderRadius: const BorderRadius.all(
                                     Radius.circular(20))),
                             child: Padding(
-                              padding: const EdgeInsets.symmetric(horizontal: 15),
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 15),
                               child: Row(
                                 children: [
                                   const Icon(Icons.search),
@@ -129,30 +130,39 @@ class _ExplorePageState extends State<ExplorePage> {
               valueListenable: resortDetailList,
               builder: (BuildContext context, List<LINModel> resortLists,
                   Widget? child) {
-                return Container(
-                  color: Colors.white,
-                  child: ListView.builder(
-                    itemCount: filteredLists.length,
-                    itemBuilder: (ctx, index) {
-                      final data = filteredLists[index];
-                      final base64Image = data.image;
-                      final imageBytes = base64Decode(base64Image);
-                      return GestureDetector(
-                        onTap: () {
-                          Navigator.pushReplacement(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => InDetail(index),
-                              ));
-                        },
-                        child: Classes(
-                          images: imageBytes,
-                          index: index,
-                        ),
-                      );
-                    },
-                  ),
-                );
+                if (resortLists.isEmpty) {
+                  return const Center(
+                    child: Text(
+                      "'Go to settings and add resort from Admin page \n                           to display resorts.'",
+                      style: TextStyle(color: Colors.grey),
+                    ),
+                  );
+                } else {
+                  return Container(
+                    color: Colors.white,
+                    child: ListView.builder(
+                      itemCount: filteredLists.length,
+                      itemBuilder: (ctx, index) {
+                        final data = filteredLists[index];
+                        final base64Image = data.image;
+                        final imageBytes = base64Decode(base64Image);
+                        return GestureDetector(
+                          onTap: () {
+                            Navigator.pushReplacement(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => InDetail(index),
+                                ));
+                          },
+                          child: Classes(
+                            images: imageBytes,
+                            index: index,
+                          ),
+                        );
+                      },
+                    ),
+                  );
+                }
               },
             )),
       ),
